@@ -19,7 +19,9 @@ const InputTask = () => {
     const [inputTitle, setInputTitle] = useRecoilState(inputTitleState)
     const [addTitle, setAddTitle] = useRecoilState(addTitleState)
 
+    //ランダムな少数を生成し基数32の文字列の先頭２文字(0.)を削除する.
     const getKey = () => Math.random().toString(32).substring(2)
+    console.log(getKey)
 
     const onChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
         setInputTitle(event.target.value)
